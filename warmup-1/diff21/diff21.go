@@ -1,4 +1,4 @@
-package main
+package diff21
 
 func diff21(n int) int {
 	if n > 21 {
