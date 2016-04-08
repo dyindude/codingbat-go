@@ -15,9 +15,10 @@ func TestMain(t *testing.T) {
 		{5, 5},
 		{2},
 		{9},
-		{},
+		//		{},
 		{3, 9, 2, 3, 3},
 	}
+
 	r := []bool{
 		true,
 		false,
@@ -29,14 +30,14 @@ func TestMain(t *testing.T) {
 		false,
 		false,
 		true,
-		false,
+		//		false,
 		true,
 	}
-	for i, v := range r {
-		if array_front9(s[i][:]) != v {
-			t.Errorf("Passed values: %s", s[i][:])
-			t.Errorf("Expected output of %s, but got %s instead.", v, array_front9(s[i][:]))
+
+	for i, v := range s {
+		if array_front9(v) != r[i] {
+			t.Errorf("Expected output of %s, but got %s instead.", r[i], array_front9(v))
+
 		}
 	}
-
 }
